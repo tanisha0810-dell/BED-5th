@@ -24,11 +24,16 @@ let users = [
 
 ]
 function isEligible(id){
-    let user = users.filter((user)=> user.id==id);
+    return new Promise((resolve, reject)=>{
+        let user = users.filter((user)=> user.id==id);
     if(!user) return "no user found";
     if(user.age>=18){
         return "eligible to vote"
     } else {
         return " not eligible"
     }
+    })
 }
+isEligible(1).then((data)=>{
+    console.log(data)
+})
