@@ -1,0 +1,3 @@
+post request server pe data add krne ke liye hoti hai
+req.body se read hota hai data
+post request ka data json ya urlencoded form mein ata hai aur use express.json middleware ke through change krte hai
